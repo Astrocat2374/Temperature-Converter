@@ -1,8 +1,24 @@
+
+
+
+
+
+
+
+
+
+
+
+var f = [];
+var c = [];
+
 for (farenheit = 20; farenheit < 120; farenheit+=5){
 	
 	function toCelcius(farenheit){
-	return (farenheit-32) * (5/9);
+		return (farenheit-32) * (5/9);
+		f[farenheit] = farenheit;
+		c[farenheit] = toCelcius;
 	}
-	
-var celcius = toCelcius(farenheit);
+	return f;
+	return c;
 }

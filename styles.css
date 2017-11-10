@@ -1,4 +1,27 @@
 table{
-	border: 1px solid black;
+	font-family:helvetica;
+	font-size:16px;
+	margin:auto;
+	border-collapse:collapse;
+}
+
+td, th{
+	padding:8px;
+	border: 1px solid #ddd;
 	text-align: center;
+	width:50%;
+}
+
+th{
+	padding:8px;
+	font-size:24px;
+	font-style:bold;
+	color:#ffffff;
+	background-color:#0099ff;
+}
+
+#row:nth-child(even) {background-color:#ccebff;}
+
+#row:hover {
+	background-color:#80ccff;
 }

@@ -25,10 +25,3 @@ th{
 #row:hover {
 	background-color:#80ccff;
 }
-
-#thermometer{
-	padding-left:50px;
-	display:inline-block;
-	vertical-align:middle;
-	background-color:#80ccff;
-}

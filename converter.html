@@ -12,6 +12,7 @@
 		Temperature Converter
 	</h1>
 	<aside>
+
 		<div id = userConverter>
 			
 			Temperature:<br>
@@ -35,25 +36,32 @@
 
 		</div>
 
-		<br>
-
 		<script>
 
-			var temp = document.getElementByID("inputTemperature").value;
-			var unit = document.getElementByID("convertTo").value;
+			var userInput = document.getElementById("inputTemperature");
+			var unit = document.getElementById("convertTo");
 
 			function userConvert() {
-				console.log(temp)
-				console.log(unit)
+
+				console.log("userConvert");
+
+				console.log(userInput.value);
+				console.log(unit.value);
+
+				var temp = parseint(userInput.value, 10);
+				console.log(temp);
+				
 				if (unit === "celsius") {
 
 					toConvertedtemp = (temp - 32) * (5 / 9);
 					toConvertedtemp = Math.round(toConvertedTemp * 100) / 100;
+					console.log("celsius")
 
 				} else if (unit === "fahrenheit") {
 
 					toConvertedtemp = temp * (9 / 5) + 32;
 					toConvertedtemp = Math.round(toConvertedTemp * 100) / 100;
+					console.log("fahrenheit")
 
 				} else {
 
@@ -67,6 +75,8 @@
 			}
 
 		</script>
+
+		<br>
 		
 		<table>
 			<tr>

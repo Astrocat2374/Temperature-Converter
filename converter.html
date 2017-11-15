@@ -21,8 +21,8 @@
 			Convert to:<br>
 			<select id="convertTo">
 					
-				<option value= "celsius" >Celsius</option>
-				<option value= "fahrenheit" >Fahrenheit</option>
+				<option value="celsius">Celsius</option>
+				<option value="fahrenheit">Fahrenheit</option>
 				
 			</select>
 				
@@ -31,8 +31,6 @@
 			<br>
 
 			<p id="userOutput">Your converted temperature will appear here</p>
-			
-			<br>
 
 		</div>
 
@@ -40,6 +38,7 @@
 
 			var userInput = document.getElementById("inputTemperature");
 			var unit = document.getElementById("convertTo");
+			var toConvertedTemp;
 
 			function userConvert() {
 
@@ -48,20 +47,20 @@
 				console.log(userInput.value);
 				console.log(unit.value);
 
-				var temp = parseint(userInput.value, 10);
+				var temp = parseInt(userInput.value, 10);
 				console.log(temp);
 				
-				if (unit === "celsius") {
+				if (unit.value === "celsius") {
 
-					toConvertedtemp = (temp - 32) * (5 / 9);
+					toConvertedTemp = (temp - 32) * (5 / 9);
 					toConvertedtemp = Math.round(toConvertedTemp * 100) / 100;
-					console.log("celsius")
+					toConvertedTemp = toConvertedTemp + "° C"
 
-				} else if (unit === "fahrenheit") {
+				} else if (unit.value === "fahrenheit") {
 
-					toConvertedtemp = temp * (9 / 5) + 32;
-					toConvertedtemp = Math.round(toConvertedTemp * 100) / 100;
-					console.log("fahrenheit")
+					toConvertedTemp = temp * (9 / 5) + 32;
+					toConvertedTemp = Math.round(toConvertedTemp * 100) / 100;
+					toConvertedTemp = toConvertedTemp + "° F"
 
 				} else {
 

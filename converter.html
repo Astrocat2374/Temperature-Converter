@@ -8,16 +8,19 @@
 </head>
 <body>
 	<aside>
-		<form>
-			Temp:<br>
+		<form action = "userConvert.js">
+			Temperature:<br>
 			<input type=number name="temp"><br>
-			Select type:<br>
-			<input type=radio name="unit" value="Celcius">
-			Celcius<br>
-			<input type=radio name="unit" value="Farenheit">
-			Farenheit<br>
-			<input type="submit" value="Convert!">
+			Convert to:<br>
+			<select name="convert">
+				<option value="celcius">Celcius</option>
+				<option value="farenheit">Farenheit</option>
+			</select>
+			<input type="submit" value="Convert!" onclick="userConvert()">
 		</form>
+		<script>
+			document.write(convertedTemp)
+		</script>
 		<table>
 			<tr>
 				<th class=header>

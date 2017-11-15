@@ -2,36 +2,83 @@
 <html lang="en">
 <head>
 	<script src="conversion.js"></script>
+	<script src="userConvert.js"></script>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<meta charset="UTF-8">
 	<title>Temperature Converter</title>
 </head>
 <body>
+	<h1>
+		Temperature Converter
+	</h1>
 	<aside>
-		<form action = "userConvert.js">
+		<div id = userConverter>
+			
 			Temperature:<br>
-			<input type=number name="temp"><br>
+			<input type=number id="inputTemperature" placeholder="Temperature"/><br>
+			
 			Convert to:<br>
-			<select name="convert">
-				<option value="celcius">Celcius</option>
-				<option value="farenheit">Farenheit</option>
+			<select id="convertTo">
+					
+				<option value= "celsius" >Celsius</option>
+				<option value= "fahrenheit" >Fahrenheit</option>
+				
 			</select>
-			<input type="submit" value="Convert!" onclick="userConvert()">
-		</form>
+				
+			<button type="button" onclick="userConvert()">Convert!</button>
+			
+			<br>
+
+			<p id="userOutput">Your converted temperature will appear here</p>
+			
+			<br>
+
+		</div>
+
+		<br>
+
 		<script>
-			document.write(convertedTemp)
+
+			var temp = document.getElementByID("inputTemperature").value;
+			var unit = document.getElementByID("convertTo").value;
+
+			function userConvert() {
+				console.log(temp)
+				console.log(unit)
+				if (unit === "celsius") {
+
+					toConvertedtemp = (temp - 32) * (5 / 9);
+					toConvertedtemp = Math.round(toConvertedTemp * 100) / 100;
+
+				} else if (unit === "fahrenheit") {
+
+					toConvertedtemp = temp * (9 / 5) + 32;
+					toConvertedtemp = Math.round(toConvertedTemp * 100) / 100;
+
+				} else {
+
+					toConvertedTemp = "You shouldn't be seeing this. It may be a glitch. Actually, you're just a dirty hacker, aren't you?";
+
+				}
+
+			var convertedTemp = toConvertedTemp;
+			document.getElementById("userOutput").innerHTML = convertedTemp;
+
+			}
+
 		</script>
+		
 		<table>
 			<tr>
-				<th class=header>
-					Farenheit
+				<th>
+					Fahrenheit
 				</th>
-				<th class=header>
-					Celcius
+				<th>
+					Celsius
 				</th>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(20)
@@ -44,7 +91,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(25)
@@ -58,7 +105,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(30)
@@ -71,7 +118,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(35)
@@ -85,7 +132,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(40)
@@ -98,7 +145,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(45)
@@ -112,7 +159,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(50)
@@ -125,7 +172,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(55)
@@ -139,7 +186,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(60)
@@ -152,7 +199,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(65)
@@ -166,7 +213,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(70)
@@ -179,7 +226,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(75)
@@ -193,7 +240,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(80)
@@ -206,7 +253,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(85)
@@ -220,7 +267,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(90)
@@ -233,7 +280,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(95)
@@ -247,7 +294,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(100)
@@ -260,7 +307,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(105)
@@ -274,7 +321,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(110)
@@ -287,7 +334,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(115)
@@ -301,7 +348,7 @@
 				</td>
 			</tr>
 
-			<tr id=row>
+			<tr>
 				<td>
 					<script>
 						document.write(120)

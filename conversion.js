@@ -1,9 +1,9 @@
 var c = [];	
 
-for (farenheit = 20; farenheit <= 120; farenheit += 5){
+for (fahrenheit = 20; fahrenheit <= 120; fahrenheit += 5){
 
-	celcius = (farenheit - 32) * (5 / 9);
-	celcius = Math.round(celcius * 100) / 100;
-	c[farenheit] = celcius;
+	celsius = (fahrenheit - 32) * (5 / 9);
+	celsius = Math.round(celsius * 100) / 100;
+	c[fahrenheit] = celsius;
 
 }

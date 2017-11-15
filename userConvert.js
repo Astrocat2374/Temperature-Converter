@@ -3,10 +3,11 @@ function userConvert() {
 	var unit = document.getElementByID("convert");
 
 	if unit === "celcius"{
-		convertedtemp = (temp - 32) * (5 / 9);
-		convertedtemp = Math.round(convertedTemp * 100) / 100;
+		toConvertedtemp = (temp - 32) * (5 / 9);
+		toConvertedtemp = Math.round(toConvertedTemp * 100) / 100;
 	} else if unit === "farenheit"{
-		convertedtemp = (temp - 32) * (5 / 9);
-		convertedtemp = Math.round(convertedTemp * 100) / 100;
+		toConvertedtemp = (temp - 32) * (5 / 9);
+		toConvertedtemp = Math.round(toConvertedTemp * 100) / 100;
 	}
+	var convertedTemp = toConvertedTemp
 }

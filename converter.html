@@ -48,7 +48,12 @@
 				var temp = parseInt(userInput.value, 10);
 				
 				// if... else if... code that detects if the user wants to convert to celsius or fahrenheit and executes the correct formula
-				if (unit.value === "celsius") {
+				if (isNaN(temp)) {
+
+					// Displays an error message if a number wasn't input
+					toConvertedTemp = "All you had to do was type a number. But you clearly failed, by all accounts."
+				
+				} else if (unit.value === "celsius") {
 
 					// Conversion formula for celsius
 					toConvertedTemp = (temp - 32) * (5 / 9);

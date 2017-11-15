@@ -11,8 +11,8 @@
 	<h1>
 		Temperature Converter
 	</h1>
-	<aside>
-
+	<div>
+		
 		<div id = userConverter>
 			
 			Temperature:<br>
@@ -42,18 +42,12 @@
 
 			function userConvert() {
 
-				console.log("userConvert");
-
-				console.log(userInput.value);
-				console.log(unit.value);
-
 				var temp = parseInt(userInput.value, 10);
-				console.log(temp);
 				
 				if (unit.value === "celsius") {
 
 					toConvertedTemp = (temp - 32) * (5 / 9);
-					toConvertedtemp = Math.round(toConvertedTemp * 100) / 100;
+					toConvertedTemp = Math.round(toConvertedTemp * 100) / 100;
 					toConvertedTemp = toConvertedTemp + "° C"
 
 				} else if (unit.value === "fahrenheit") {
@@ -110,7 +104,6 @@
 					<script>
 						document.write(c[25])
 					</script>
-
 				</td>
 			</tr>
 
@@ -137,7 +130,6 @@
 					<script>
 						document.write(c[35])
 					</script>
-
 				</td>
 			</tr>
 
@@ -164,7 +156,6 @@
 					<script>
 						document.write(c[45])
 					</script>
-
 				</td>
 			</tr>
 
@@ -191,7 +182,6 @@
 					<script>
 						document.write(c[55])
 					</script>
-
 				</td>
 			</tr>
 
@@ -218,7 +208,6 @@
 					<script>
 						document.write(c[65])
 					</script>
-
 				</td>
 			</tr>
 
@@ -245,7 +234,6 @@
 					<script>
 						document.write(c[75])
 					</script>
-
 				</td>
 			</tr>
 
@@ -272,7 +260,6 @@
 					<script>
 						document.write(c[85])
 					</script>
-
 				</td>
 			</tr>
 
@@ -299,7 +286,6 @@
 					<script>
 						document.write(c[95])
 					</script>
-
 				</td>
 			</tr>
 
@@ -326,7 +312,6 @@
 					<script>
 						document.write(c[105])
 					</script>
-
 				</td>
 			</tr>
 
@@ -353,7 +338,6 @@
 					<script>
 						document.write(c[115])
 					</script>
-
 				</td>
 			</tr>
 
@@ -370,6 +354,9 @@
 				</td>
 			</tr>
 		</table>
-	</aside>
+		<p>
+			Made by Evan
+		</p>
+	</div>
 </body>
 </html>

@@ -1,2 +1,2 @@
-# JS-Assignment
-Conversion table from Fahrenheit to Celsius
+# Temperature-Converter
+Conversion table from Fahrenheit to Celsius, and a converter as well

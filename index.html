@@ -15,9 +15,11 @@
 		<!-- The user input. Takes the value of the temp as a string and if the user wants to convert to celsius or fahrenheit -->
 		<div id = userConverter>
 			
+			<!-- Gets a the temperature to be converted from the user as a string -->
 			Temperature:<br>
 			<input type=number id="inputTemperature" placeholder="Temperature"/><br>
 			
+			<!-- Gets the unit to be converted to from the user -->
 			Convert to:<br>
 			<select id="convertTo">
 					
@@ -25,11 +27,13 @@
 				<option value="fahrenheit">Fahrenheit</option>
 				
 			</select>
-				
+			
+			<!-- Runs the conversion function when the button is clicked -->
 			<button type="button" onclick="userConvert()">Convert!</button>
 			
 			<br>
 
+			<!-- Where the temperature will appear -->
 			<p id="userOutput">Your converted temperature will appear here</p>
 
 		</div>
@@ -37,7 +41,7 @@
 		<!-- The calculation script. Takes input from the HTML form above -->
 		<script>
 
-			// Defines all variables and gets user input
+			// Defines all variables and changes variables to the user input
 			var userInput = document.getElementById("inputTemperature");
 			var unit = document.getElementById("convertTo");
 			var toConvertedTemp;
@@ -51,7 +55,7 @@
 				if (isNaN(temp)) {
 
 					// Displays an error message if a number wasn't input
-					toConvertedTemp = "All you had to do was type a number. But you clearly failed, by all accounts."
+					toConvertedTemp = "You didn't input a number, or there is a glitch in the matrix. Try reloading the page";
 				
 				} else if (unit.value === "celsius") {
 
@@ -62,7 +66,7 @@
 					toConvertedTemp = Math.round(toConvertedTemp * 100) / 100;
 
 					// Adds the degree symbol and temperature type to the end of the number value
-					toConvertedTemp = toConvertedTemp + "° C"
+					toConvertedTemp = toConvertedTemp + "° C";
 
 				} else if (unit.value === "fahrenheit") {
 
@@ -73,7 +77,7 @@
 					toConvertedTemp = Math.round(toConvertedTemp * 100) / 100;
 
 					// Adds the degree symbol and temperature type to the end of the number value
-					toConvertedTemp = toConvertedTemp + "° F"
+					toConvertedTemp = toConvertedTemp + "° F";
 
 				} else {
 
@@ -94,7 +98,7 @@
 
 		<br>
 		
-		<!-- Defines and HTML table -->
+		<!-- Defines an HTML table -->
 		<table>
 			<tr>
 				<th>
